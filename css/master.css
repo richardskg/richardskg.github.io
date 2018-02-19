@@ -1,0 +1,227 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Arial, Helvetica, Verdana, Sans-serif;
+	font-size: 12px;
+	color: black;
+	background: #ffffff;
+}
+.hidden {
+	display: none;
+}
+#page-container {
+    width: auto;
+    margin: auto;
+}
+
+
+header {
+	position: relative;
+	height: 300px;
+	width: auto;
+	color: #666666;
+	background: #db6d16
+	            url(../img/Denali3.jpg);
+	           /* url(../img/NeboFreeway-cropped.jpg);*/
+	background-size: cover;
+}
+
+header h1 {
+	margin: 0;
+	padding: 0;
+	float: right;
+	margin-top: 27px;
+	padding-right: 31px;
+	color: #888888;
+}
+
+#sidebar-a {
+	float: right;
+	width: 280px;
+	line-height: 18px;
+	/*background: #db6d16; */
+	background: #fceabb; /* Old browsers */
+	background: -moz-linear-gradient(left,  #fceabb 0%, #fccd4d 49%, #fbdf93 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fceabb), color-stop(49%,#fccd4d), color-stop(100%,#fbdf93)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #fceabb 0%,#fccd4d 49%,#fbdf93 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #fceabb 0%,#fccd4d 49%,#fbdf93 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #fceabb 0%,#fccd4d 49%,#fbdf93 100%); /* IE10+ */
+	background: linear-gradient(to right,  #fceabb 0%,#fccd4d 49%,#fbdf93 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=1 ); /* IE6-9 */
+}
+
+#sidebar-a .padding {
+	padding: 25px;
+}
+
+#sidebar-a a {
+	color: #5E667A;
+	text-decoration: none;	
+}
+
+#sidebar-a a:hover {
+	color: #B83D0D;
+}
+
+#sidebar-a #altnav {
+	width: 350px;
+	float: right;
+	text-align: right;
+}
+
+#content {
+	margin-right: 280px;
+	line-height: 18px;
+}
+
+#content .padding {
+	padding: 25px;
+	padding-top: 10px;
+}
+#content {
+	margin-right: 280px;
+	/*background: green;*/
+}
+
+#content h2 {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 15px;
+}
+
+#content p {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 15px;
+}
+
+footer {
+	clear: both;
+	font-family: Tahoma, Arial, Helvetica, Sans-serif;
+	font-size: 10px;
+	color: #a9a9a9;
+	border-top: 1px solid #efefef;
+	padding: 13px 25px;
+	line-height: 18px;
+}
+footer a {
+	color: #5E667A;
+	text-decoration: none;
+}
+footer a:hover {
+	color: #B83D0D;
+}
+footer #altnav {
+	width: 350px;
+	float: right;
+	text-align: right;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	/*float: right;*/
+	margin-top: 27px;
+	padding-right: 31px;
+}
+
+#PhysicsTitle {
+	color: #db6d16;
+}
+
+#input_items {
+	float: left;
+}
+#canvas_plotter {
+	padding-left: 100px; /* leave room for dynamic menus */
+	float: left;
+}
+
+button {
+	width: 70px;
+	margin-left: 5px;
+}
+
+label {
+  width: 55px;
+  display: inline-block;
+}
+
+#physics-header {
+	background: linear-gradient(to right,  #fceabb 0%,#fccd4d 49%,#fbdf93 100%); /* W3C */
+}
+
+#physics-header ul
+{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+#physics-header li
+{
+	display:inline;
+	float:left;
+}
+
+#physics-header a
+{
+	display:block;
+	width:120px;
+}
+
+/* from here: http://www.gmarwaha.com/blog/2007/08/23/lavalamp-for-jquery-lovers */
+.lavaLampWithImage {
+  position: relative;
+  height: 25px;
+  padding: 15px 5px 15px 0;
+  margin: 10px 0 0 0;
+  overflow: hidden;
+  float: right;
+}
+
+.lavaLampWithImage li {
+  float: left;
+  list-style: none;
+}
+
+.lavaLampWithImage li.back {
+  background: #DDD;
+  border-radius: 15px 15px 15px 15px;
+  -moz-border-radius: 15px 15px 15px 15px;
+  -webkit-border: 15px 15px 15px 15px;
+  height: 28px;
+  z-index: 8;
+  position: absolute;
+}
+
+.lavaLampWithImage li a {
+  font: normal 130% 'News Cycle', sans-serif;
+  text-shadow:1px 1px #FFF;
+  text-decoration: none;
+  color: #222;
+  outline: none;
+  text-align: center;
+  letter-spacing: 0;
+  z-index: 10;
+  display: block;
+  /*float: left;*/
+  height: 30px;
+  padding: 0px 9px 0 9px;
+  position: relative;
+  overflow: hidden;
+  margin: auto 10px;    
+}
+
+.lavaLampWithImage li a:hover, .lavaLampWithImage li a:active, .lavaLampWithImage li a:visited {
+  border: none;
+}
+
+nav {
+	position: absolute; 
+	bottom: 0;
+	float: right;
+}
+

@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html lang = "en">
+	<head>
+		<meta charset = "utf-8">
+		<title>"MHD"</title>
+		<meta name = "description" content = "">
+		<style type="text/css" media="all">
+			@import "css/physics.css";
+		</style>
+		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src = "js/lib/underscore-min.js"></script>
+		<script src = "js/lib/backbone-min.js"></script>
+		<script src = "js/local/mhd.js"></script>
+		<script src = "js/local/lines.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Physics!</h1>
+			<nav>
+				<ul class="lavaLampWithImage" id="lava_menu">
+					<li><a href="index.html">home</a></li>
+					<li><a href="simulations.html">physics home</a></li>
+					<li><a href="./BField.html">particle in constant field</a></li>
+					<li><a href="./ECrossB.html">particle in crossed fields</a></li>
+					<li class="current"><a href="./Lines.html">1D MHD</a></li>
+					<li><a href="./MHD-equations.html">Equations</a></li>
+				</ul>
+			</nav>
+			<p></p>
+		</header>
+		<div>
+			<script type= "text/template" id="checkbox_template">
+				<input type="checkbox" id="checkbox" value=false />
+				<label><font color=<%= font_color %>><%= checkbox_label %></font></label>
+				<input type="range"  min="0", max="10", step="0.5"/>
+			</script>
+			<script type="text/template" id="start_stop_template">
+				 <button id="start_stop"><%= start_stop_string %> </button>
+			</script>
+			<script type= "text/template" id="sim_parameters_template">
+				<%= sim_parameters_legend %><br />
+				<!-- input type="range" id="sim_param_rangebox",class="slider-width100", min="0", max="10", step="0.5"/ -->
+				<input type="range" />
+				<div class="sliderValue"><%= current_slider_value %></div>
+			</script>
+			<div id="content">
+				<div class="padding">
+					<p>This is a simple one-dimensional magnetohydrodynamic (MHD) plasma simulation.
+					It solves the fully nonlinear MHD equations.<br />
+					Use the checkboxes to determine which variables will be plotted. 
+					Use the sliders to change the plotted size of the data.</p>
+				</div>
+			</div>
+			<div id="input_items">
+				<h3><p>View Parameters:</p></h3>
+				<div id="checkbox_items"></div>
+				<div id="sim_controller">
+					<div id="start_stop_position"></div>
+					<button id="reset">Reset </button>
+				</div>
+				<h3><p>Simulation Parameters:</p></h3>
+				<div id="sim_param_controller">
+					<!--
+					<p>Number of time steps per display:</p>
+					<input type="range" id="numTimeStepsPerSlider", min="0", max="100", step="5", value="30"/><div class="sliderValue">test</div>
+					<p>Delay between time steps:</p>
+					<input type="range" id="plotDelaySlider", min="0", max="200", step="10", value="100"/>
+					<p>Number of points:</p>
+					<input type="range" id="numPointsSlider", min="0", max="1000", step="20", value="200"/>
+					<p>Strength of perturbation (percent of background field):</p>
+					<input type="range" id="perturbStrengthSlider", min="0", max="10", step="1", value="5"/>
+					<p>Width of perturbation (percent of number of total grid points):</p>
+					<input type="range" id="perturbWidthSlider", min="0", max="10", step="1", value="5"/>
+					-->
+				</div>
+			</div>
+			<div id="canvas_plotter">
+				<canvas id="plot_canvas" width="500" height="500"></canvas>
+			</div>
+			<!-- Now fire up the dynamic code. -->
+			
+			<script>   
+				window.mhdrouter = new MHDRouter();
+				Backbone.history.start();
+			</script>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang = "en">
+	<head>
+		<meta charset = "utf-8">
+		<title>"MHD Equations"</title>
+		<meta name = "description" content = "">
+		<style type="text/css" media="all">
+			@import "css/physics.css";
+		</style>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});
+		</script>
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript"
+		  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>Physics!</h1>
+			<nav>
+				<ul class="lavaLampWithImage" id="lava_menu">
+					<li><a href="index.html">home</a></li>
+					<li><a href="simulations.html">physics home</a></li>
+					<li><a href="./BField.html">particle in constant field</a></li>
+					<li><a href="./ECrossB.html">particle in crossed fields</a></li>
+					<li class="current"><a href="./Lines.html">1D MHD</a></li>
+					<li><a href="./MHD-equations.html">Equations</a></li>
+				</ul>
+			</nav>
+			<p></p>
+		</header>
+		<div>
+			<h2> The single particle equation of motion and the ideal MHD equations:</h2>
+			<div class="mhd-equations">
+				\begin{equation}m\mathbf{a} = q\mathbf{E} + \frac{q}{c}\mathbf{v} \times \mathbf{B} \\ \end{equation}		
+				\begin{equation}\frac{\partial \rho}{\partial t} = -\nabla \cdot (\rho \mathbf{v}) \\ \end{equation}
+				\begin{equation}\rho \frac{\partial \mathbf{v}}{\partial t} = -\rho \mathbf{v} \cdot \nabla \mathbf{v} - \nabla p + \mathbf{J}\times\mathbf{B} \\ \end{equation}
+				\begin{equation}\frac{\partial p}{\partial t} = -\mathbf{v}\cdot\nabla p - \gamma p \nabla \cdot \mathbf{v}\\ \end{equation}
+				\begin{equation}\frac{\partial \mathbf{B}}{\partial t} = -c\nabla \times \mathbf{E} \\ \end{equation}
+				\begin{equation}\mathbf{E} + \frac{1}{c}(\mathbf{v} \times \mathbf{B}) = 0 \\ \end{equation}
+			(5) & (6) are usually combined to give:
+				\begin{equation}\frac{\partial \mathbf{B}}{\partial t} = \nabla \times (\mathbf{v}\times \mathbf{B}) \\ \end{equation}
+			</div>
+		</div>
+	</body>
+</html>
