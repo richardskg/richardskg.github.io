@@ -21,14 +21,14 @@ var TextsToViewCollection = Backbone.Collection.extend({
 			{
 				titleId : 'home', // used to find the model
 				title : 'home', // may be used for window title
-				text : ' <h1>Welcome to NephiNumerics</h1> <p>Nestled under majestic Mount Nebo in Utah\'s Wasatch Range, the small town of Nephi is considered by many to be the Promised Land<a href="http://en.wikipedia.org/wiki/Mount_Nebo" ><sup>*</sup></a>. </p><p>It is an ideal place for quiet contemplation and when that gets to be too hard, it is also a great place for creation of computer codes. We have a little fun with some physics simulations. And have recently added a page to create some NCAA Brackets for you. It\'s pretty bare-bones, but it gets the job done. Refresh the page to get a new set of winners.</p><p>As you may have guessed, this site is still under construction. So come on in, look around and come back later when great things have been created.</p>',
+				text : ' <h1>Welcome to NephiNumerics</h1> <p>Nestled under majestic Mount Nebo in Utah\'s Wasatch Range, the small town of Nephi is considered by many to be the Promised Land<a href="http://en.wikipedia.org/wiki/Mount_Nebo" ><sup>*</sup></a>. </p><p>It is an ideal place for quiet contemplation and when that gets to be too hard, it is also a great place for creation of computer codes. We have a little fun with some physics simulations. And have recently added a page to create some NCAA Brackets for you. It\'s pretty bare-bones, but it gets the job done. Click the slider to recalculate. Move the slider to change the odds.</p><p>As you may have guessed, this site is still under construction. So come on in, look around and come back later when great things have been created.</p>',
 				url : 'home',
 				isActive : false,
 			},
 			{
 				titleId : 'about',
 				title : 'about',
-				text : ' <h1>About Us</h1>  <p>If you want to ponder the deeper meanings of the universe, check out our pages on physics simulations. And if you want some help filling out your NCAA Brackets, click on the brackets link. It\ss pretty bare-bones, but it gets the job done. Refresh the page to get a new set of winners.</p> <p>Unfortunately, none of the pictures on these pages are of Mount Nebo. However <a href="http://www.willhiteweb.com/utah_climbing/wasatch_mountains/nebo_loop/mount_nebo_090.htm">these are</a> and <a href="http://www.flickr.com/photos/courthouselover/7595185120/">this</a> is of Nephi</p>  ',
+				text : ' <h1>About Us</h1>  <p>If you want to ponder the deeper meanings of the universe, check out our pages on physics simulations. And if you want some help filling out your NCAA Brackets, click on the brackets link. It\'s pretty bare-bones, but it gets the job done. Click the slider to recalculate. Move the slider to change the odds.</p> <p>Unfortunately, none of the pictures on these pages are of Mount Nebo. However <a href="http://www.willhiteweb.com/utah_climbing/wasatch_mountains/nebo_loop/mount_nebo_090.htm">these are</a> and <a href="http://www.flickr.com/photos/courthouselover/7595185120/">this</a> is of Nephi</p>  ',
 				url : 'about'
 			},
 			{
