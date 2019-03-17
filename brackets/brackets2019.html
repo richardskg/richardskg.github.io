@@ -1,0 +1,536 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+  <meta name="NCAA Bracket" content="content">
+  <link rel="stylesheet" href="bracket.css" type="text/css">
+  <title> 2019 NCAA Men's Basketball Tournament Randomizer</title>
+</head>
+<body class="bracket standings light-blue">
+<div id="content-wrapper">
+  <div id="table">
+     <table class="gridtable">
+
+<!-- Table Dates -->
+     <tr>
+        <th class="round_1 current"> 1st ROUND </th>
+        <th class="round_2 "> 2nd ROUND </th>
+        <th class="round_3"> SWEET 16 </th>
+        <th class="round_4"> ELITE EIGHT </th>
+        <th class="round5"> FINAL FOUR </th>
+        <th class="round_6"> CHAMPION </th>
+        <th class="round_5"> FINAL FOUR </th>
+        <th class="round_4"> ELITE EIGHT </th>
+        <th class="round_3"> SWEET 16 </th>
+        <th class="round_2"> 2nd ROUND </th>
+        <th class="round_1 current"> 1st ROUND </th>
+      </tr>
+      <tr>
+        <td class="current"> March 15-16 </td>
+        <td> March 17-18 </td>
+        <td> March 22-23 </td>
+        <td> March 24-25 </td>
+        <td> March 31 </td>
+        <td> April 2 </td>
+        <td> March 31 </td>
+        <td> March 24-25 </td>
+        <td> March 22-23 </td>
+        <td> March 17-18 </td>
+        <td class="current"> March 15-16 </td>
+      </tr>
+    </table>
+  </div>
+
+<!-- Bracket -->
+
+  <div id="bracket">
+    <div class="centered instructions">
+            <!-- Click the slider to recalculate. Move the slider to change the odds. <p> -->
+            Boring<input id="insanity" type="range" onclick=advanceEverybody()>Insane</input>
+    </div>
+    <div id="round1" class="round">
+      <h3>
+        Round One (2019 NCAA Men's Basketball Tournament)
+      </h3>
+
+      <div class="region region1">
+        <h4 class="region1 first_region">
+          SOUTH
+        </h4>
+        <div id="match17" class="match m1"></div>
+        <div id="match18" class="match m2"></div>
+        <div id="match19" class="match m3"></div>
+        <div id="match20" class="match m4"></div>
+        <div id="match21" class="match m5"></div>
+        <div id="match22" class="match m6"></div>
+        <div id="match23" class="match m7"></div>
+        <div id="match24" class="match m8"></div>
+      </div>
+      <div class="region region2">
+        <h4 class="region2 first_region">
+          WEST
+        </h4>
+        <div id="match25" class="match m1"></div>
+        <div id="match26" class="match m2"></div>
+        <div id="match27" class="match m3"></div>
+        <div id="match28" class="match m4"></div>
+        <div id="match29" class="match m5"></div>
+        <div id="match30" class="match m6"></div>
+        <div id="match31" class="match m7"></div>
+        <div id="match32" class="match m8"></div>
+      </div>
+      <div class="region region3">
+        <h4 class="region3 first_region">
+          EAST
+        </h4>
+        <div id="match1" class="match m1"></div>
+        <div id="match2" class="match m2"></div>
+        <div id="match3" class="match m3"></div>
+        <div id="match4" class="match m4"></div>
+        <div id="match5" class="match m5"></div>
+        <div id="match6" class="match m6"></div>
+        <div id="match7" class="match m7"></div>
+        <div id="match8" class="match m8"></div>
+      </div>
+      <div class="region region4">
+        <h4 class="region4 first_region">
+          MIDWEST
+        </h4>
+        <div id="match9" class="match m1"></div>
+        <div id="match10" class="match m2"></div>
+        <div id="match11" class="match m3"></div>
+        <div id="match12" class="match m4"></div>
+        <div id="match13" class="match m5"></div>
+        <div id="match14" class="match m6"></div>
+        <div id="match15" class="match m7"></div>
+        <div id="match16" class="match m8"></div>
+      </div>
+    </div>
+    <div id="round2" class="round">
+      <h3>
+        Round Two (2019 NCAA Men's Basketball Tournament)
+      </h3>
+      <div class="region region1">
+        <h4 class="region1">
+          SOUTH
+        </h4>
+        <div id="match41" class="match m1"></div>
+        <div id="match42" class="match m2"></div>
+        <div id="match43" class="match m3"></div>
+        <div id="match44" class="match m4"></div>
+      </div>
+      <div class="region region2">
+        <h4 class="region2">
+          WEST
+        </h4>
+        <div id="match45" class="match m1"></div>
+        <div id="match46" class="match m2"></div>
+        <div id="match47" class="match m3"></div>
+        <div id="match48" class="match m4"></div>
+      </div>
+      <div class="region region3">
+        <h4 class="region3">
+          EAST
+        </h4>
+        <div id="match33" class="match m1"></div>
+        <div id="match34" class="match m2"></div>
+        <div id="match35" class="match m3"></div>
+        <div id="match36" class="match m4"></div>
+      </div>
+      <div class="region region4">
+        <h4 class="region4">
+          MIDWEST
+        </h4>
+        <div id="match37" class="match m1"></div>
+        <div id="match38" class="match m2"></div>
+        <div id="match39" class="match m3"></div>
+        <div id="match40" class="match m4"></div>
+      </div>
+    </div>
+    <div id="round3" class="round">
+      <h3>
+        Round Three (2019 NCAA Men's Basketball Tournament)
+      </h3>
+      <div class="region region1">
+        <h4 class="region1">
+          SOUTH
+        </h4>
+        <div id="match53" class="match m1"></div>
+        <div id="match54" class="match m2"></div>
+      </div>
+      <div class="region region2">
+        <h4 class="region2">
+          WEST
+        </h4>
+        <div id="match55" class="match m1"></div>
+        <div id="match56" class="match m2"></div>
+      </div>
+      <div class="region region3">
+        <h4 class="region3">
+          EAST
+        </h4>
+        <div id="match49" class="match m1"></div>
+        <div id="match50" class="match m2"></div>
+      </div>
+      <div class="region region4">
+        <h4 class="region4">
+          MIDWEST
+        </h4>
+        <div id="match51" class="match m1"></div>
+        <div id="match52" class="match m2"></div>
+      </div>
+    </div>
+    <div id="round4" class="round">
+      <h3>
+        Round Four (2019 NCAA Men's Basketball Tournament)
+      </h3>
+      <div class="region region1">
+        <h4 class="region1">
+          SOUTH
+        </h4>
+        <div id="match59" class="match m1"></div>
+      </div>
+      <div class="region region2">
+        <h4 class="region2">
+          WEST
+        </h4>
+        <div id="match60" class="match m1"></div>
+      </div>
+      <div class="region region3">
+        <h4 class="region3">
+          EAST
+        </h4>
+        <div id="match57" class="match m1"></div>
+      </div>
+      <div class="region region4">
+        <h4 class="region4">
+          MIDWEST
+        </h4>
+        <div id="match58" class="match m1"></div>
+      </div>
+    </div>
+    <div id="round5" class="round">
+      <h3>
+        Round Five (2019 NCAA Men's Basketball Tournament)
+      </h3>
+      <div class="region">
+        <div id="match62" class="match m1"></div>
+        <div id="match61" class="match m2"></div>
+      </div>
+    </div>
+    <div id="round6" class="round">
+      <h3>
+        Round Six (2019 NCAA Men's Basketball Tournament)
+      </h3>
+      <div class="region">
+        <div id="match63" class="match m1"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="firstFour">
+      <div id="round1" class = round>
+          <div class="region region1">
+            <h3 class="region1 first_region">
+              First Four
+            </h3>
+            <div id="match-14" class="match m1"></div>
+            <div id="match-38" class="match m2"></div>
+            <div id="match-54" class="match m3"></div>
+            <div id="match-62" class="match m4"></div>
+          </div>
+      </div>
+  </div>
+
+
+</div>
+
+<script>
+
+var firstFourTeams = [
+    [16, "N.C. Central", 16, "Texas Southern", 24], // go to West  24,
+    [11, "Arizona St", 11, "Syracuse", 12],  // go to Midwest 20
+    [11, "St Bonaventure", 11, "UCLA", 4], // go to EAST, 4
+    [16, "LIU Brooklyn", 16, "Radford", 0], // go to EAST, 0,1
+]
+var teams = [
+  // East
+  [1, "Villanova", 16, "ff1"],
+  [8, "Virginia Tech", 9, "Alabama"],
+  [5, "West Virginia", 12, "Murray State"],
+  [4, "Wichita St", 13, "Marshall"],
+  [6, "Florida", 11, "ff2"],
+  [3, "Texas Tech", 14, "SF Austin"],
+  [7, "Arkansas", 10, "Butler"],
+  [2, "Purdue", 15, "CS Fullerton"],
+  // Midwest
+  [1, "Kansas", 16, "Penn"],
+  [8, "Seton Hall", 9, "NC State"],
+  [5, "Clemson", 12, "New Mexico State"],
+  [4, "Auburn", 13, "Charleston"],
+  [6, "TCU", 11, "ff"],
+  [3, "Michigan State", 14, "Bucknell"],
+  [7, "Rhode Island", 10, "Oklahoma"],
+  [2, "Duke", 15, "Iona"],
+    // South
+  [1, "Virginia", 16, "UMBC"],
+  [8, "Creighton", 9, "Kansas State"],
+  [5, "Kentucky", 12, "Davidson"],
+  [4, "Arizona", 13, "Buffalo"],
+  [6, "Miami FL", 11, "Loyola Chicago"],
+  [3, "Tennessee", 14, "Wright State"],
+  [7, "Nevada", 10, "Texas"],
+  [2, "Cincinnati", 15, "Georgia State"],
+  // West
+  [1, "Xavier", 16, "ff"],
+  [8, "Missouri", 9, "Florida State"],
+  [5, "Ohio State", 12, "South Dakota State"],
+  [4, "Gonzaga", 13, "UNC Greensboro"],
+  [6, "Houston", 11, "San Diego State"],
+  [3, "Michigan", 14, "Montana"],
+  [7, "Texas A&M", 10, "Providence"],
+  [2, "North Carolina", 15, "Lipscomb"]
+]
+
+setup();
+advanceEverybody();
+
+function setup() {
+    document.getElementById("insanity").value = 50
+// This is hard coded to only work for a tournament with 64 main teams (the first round is handled separately)
+// First create the slots that the teams will go into
+// First FOUR
+    for(i=0; i<4; i++) {
+        var matchId = "match" + ((firstFourTeams[i][4] + 2) * 2 - 66);
+        if (document.getElementById(matchId)) {
+            document.getElementById(matchId).innerHTML = '<p class="slot slot1" ></p><p class="slot slot2" ></p>'
+        }
+    }
+    // Main Bracket
+    for(i=0; i<64; i++) {
+        var matchId = "match" + (i + 1)
+        if (document.getElementById(matchId)) {
+            document.getElementById(matchId).innerHTML = '<p class="slot slot1" ></p><p class="slot slot2" ></p>'
+        }
+    }
+
+    // Next put the teams in their starting postions
+    // First FOUR
+    for (i=0; i<4; i++) {
+        var matchId = "match" + ((firstFourTeams[i][4]  + 2) * 2 - 66);
+        if (document.getElementById(matchId)) {
+            document.getElementById(matchId).getElementsByClassName("slot slot1")[0].innerHTML = '<span class="seed">' + firstFourTeams[i][0] + '</span><span class="team"> ' + firstFourTeams[i][1] + ' </span>'
+            document.getElementById(matchId).getElementsByClassName("slot slot2")[0].innerHTML = '<span class="seed">' + firstFourTeams[i][2] + '</span><span class="team"> ' + firstFourTeams[i][3] + ' </span>'
+        } else {
+            console.debug("missing: " + matchId)
+        }
+    }
+}
+
+function advanceEverybody() {
+// We need to play the firstFour so we know who is in the main bracket
+//     console.clear()
+    advanceFirstFourWinners()
+
+    // Main Bracket
+    for (i=0; i<32; i++) {
+        var matchId = "match" + (i + 1)
+        if (document.getElementById(matchId)) {
+            document.getElementById(matchId).getElementsByClassName("slot slot1")[0].innerHTML = '<span class="seed">' + teams[i][0] + '</span><span class="team"> ' + teams[i][1] + ' </span>'
+            document.getElementById(matchId).getElementsByClassName("slot slot2")[0].innerHTML = '<span class="seed">' + teams[i][2] + '</span><span class="team"> ' + teams[i][3] + ' </span>'
+        } else {
+            console.debug("missing: " + matchId)
+        }
+    }
+
+    // var timeout = 1000
+    // window.setTimeout(function(){ advanceWinner(0,  32, true) },timeout)
+    // window.setTimeout(function(){ advanceWinner(32, 48, true) },timeout*2)
+    // window.setTimeout(function(){ advanceWinner(48, 56, true) },timeout*3)
+    // window.setTimeout(function(){ advanceWinner(56, 60, true) },timeout*4)
+    // window.setTimeout(function(){ advanceWinner(60, 62, true) },timeout*5)
+    // window.setTimeout(function(){ advanceWinner(62, 63, false) },timeout*6)
+
+    advanceWinner(0,  32, true)
+    advanceWinner(32, 48, true)
+    advanceWinner(48, 56, true)
+    advanceWinner(56, 60, true)
+    advanceWinner(60, 62, true)
+    advanceWinner(62, 63, false)
+}
+// Now find the winners
+function advanceWinner(start, stop, doAdvance) {
+    for (i=start; i<stop; i++) {
+        var matchId = "match" + (i + 1)
+        var seeds = getSeeds(matchId)
+        var winner = playThem(seeds[0], seeds[1])
+        var winnerObj = setWinnersAndLosers(matchId, winner, seeds)
+
+        if (doAdvance) {
+            advanceWinnerToNext(i+1, winnerObj.winnerName, winnerObj.winnerSeed);
+        }
+    }
+}
+
+function setWinnersAndLosers(matchId, winnerSlot, seeds) {
+    var winnerObj = new Object()
+    var winnerName = ""
+    var winnerSeed = 0
+    if (winnerSlot == 1) {
+        winnerName = document.getElementById(matchId).getElementsByClassName("slot slot1")[0].getElementsByClassName("team")[0].textContent
+        var loserName = document.getElementById(matchId).getElementsByClassName("slot slot2")[0].getElementsByClassName("team")[0].textContent
+        winnerSeed = seeds[0]
+        var loserSeed = seeds[1]
+        // mark the winner and loser
+        setHtml(matchId, 1, winnerSeed, winnerName, true)
+        setHtml(matchId, 2, loserSeed, loserName, false)
+    } else {
+        winnerName = document.getElementById(matchId).getElementsByClassName("slot slot2")[0].getElementsByClassName("team")[0].textContent
+        var loserName = document.getElementById(matchId).getElementsByClassName("slot slot1")[0].getElementsByClassName("team")[0].textContent
+        winnerSeed = seeds[1]
+        var loserSeed = seeds[0]
+        setHtml(matchId, 1, loserSeed, loserName, false)
+        setHtml(matchId, 2, winnerSeed, winnerName, true)
+    }
+    winnerObj.winnerName = winnerName
+    winnerObj.winnerSeed = winnerSeed
+    return winnerObj
+}
+
+function advanceWinnerToNext(id, winnerName, winnerSeed) {
+    var newMatchId = "match" + Math.trunc((65 + id)/2)
+    // odd ids (id = i + 1) go into slot1 in the new, even in slot2
+    if (Math.trunc(id) % 2 == 1) {
+        document.getElementById(newMatchId).getElementsByClassName("slot slot1")[0].innerHTML = '<span class="seed">' + winnerSeed + '</span><span class="team"> ' + winnerName + ' </span>'
+    } else {
+        document.getElementById(newMatchId).getElementsByClassName("slot slot2")[0].innerHTML = '<span class="seed">' + winnerSeed + '</span><span class="team"> ' + winnerName + ' </span>'
+    }
+    return newMatchId;
+}
+
+
+function advanceFirstFourWinners() {
+    for (i=0; i<4; i++) {
+        var matchId = "match" + ((firstFourTeams[i][4] + 2) * 2 - 66);
+        seed = firstFourTeams[i][0]
+        var winner = playThem(seed, seed)
+        var winnerName = ""
+        var loserName = ""
+        if (winner == 1) {
+            winnerName = firstFourTeams[i][1]
+            loserName = firstFourTeams[i][3]
+                        // mark the winner and loser
+            setHtml(matchId, 1, seed, winnerName, true)
+            setHtml(matchId, 2, seed, loserName, false)
+        } else {
+            winnerName = firstFourTeams[i][3]
+            loserName = firstFourTeams[i][1]
+            setHtml(matchId, 1, seed, loserName, false)
+            setHtml(matchId, 2, seed, winnerName, true)
+        }
+
+        // Advance them by putting them in the main teams array
+        teams[firstFourTeams[i][4]][3] = winnerName
+    }
+}
+
+function setHtml(matchId, slotId, seed, name, isWinner) {
+    var slotClass = slotId == 1 ? "slot slot1" : "slot slot2"
+    var winnerClass = isWinner ? "winner" : "loser"
+    document.getElementById(matchId).getElementsByClassName(slotClass)[0].innerHTML = '<div onclick=changeWinner(this)><span class="' + winnerClass + '"><span class="seed">' + seed + '</span><span class="team"> ' + name + ' </span></span></div>'
+}
+
+// clickhandler for when the user clicks on a team. Make that team the new winner
+// and propagate to the end.
+function changeWinner(e) {
+    var teamName = e.getElementsByClassName("team")[0].textContent;
+    var teamSeed = e.getElementsByClassName("seed")[0].textContent;
+
+    // need to change class to winner for clicked item and loser on other one.
+    var slotId = e.parentElement.classList[1] == "slot1" ? 1 : 2
+    var matchId = e.parentElement.parentElement.id
+    var id = parseInt(matchId.replace("match", ""))
+    var seeds = getSeeds(matchId)
+    var winnerObj = setWinnersAndLosers(matchId, slotId, seeds)
+    var newMatchId = advanceWinnerToNext(id, winnerObj.winnerName, winnerObj.winnerSeed);
+    propagateWinner(newMatchId)
+}
+
+// After the user clicks on a team to make them a winner, we
+// need to keep running the simulation again.
+function propagateWinner(matchId) {
+    var maxID = 63
+    var seeds = getSeeds(matchId)
+    var winner = playThem(seeds[0], seeds[1])
+    var winnerObj = setWinnersAndLosers(matchId, winner, seeds)
+
+    var id = parseInt(matchId.replace("match", ""))
+    var doAdvance = id < maxID
+    if (doAdvance) {
+        matchId = advanceWinnerToNext(id, winnerObj.winnerName, winnerObj.winnerSeed);
+    }
+    id = parseInt(matchId.replace("match", ""))
+    doAdvance = id < 63
+    if (doAdvance) {
+        propagateWinner(matchId)
+    }
+}
+
+function playThem(seed1, seed2) {
+    // Simplifies logic if seed1 is always the lower (better) seed.
+    var switched = false
+    if (seed1 > seed2) {
+        var temp = seed1
+        seed1 = seed2
+        seed2 = temp
+        switched = true
+    }
+    var rand = Math.random()
+    // totally bogus function to let seeding influence the outcome
+    // f = ax^b + c
+    // f(0) = 0.5 -- even odds
+    // f(15) = 0.99 -- seed1 99% win rate, 1 seed vs 16
+    var x = seed2 - seed1
+
+    var at15 = 0.99
+    var b = 0.6
+    var factor = 0.9999
+    var insane = document.getElementById("insanity").valueAsNumber - 0.00001
+    if (insane < 3) {
+        factor = 1.0
+    } else if (insane < 75) {
+        b = insane/75.0
+        var maxY = at15 - 0.5
+        var a = maxY/Math.pow(15, b)
+        factor = (a * Math.pow(x, b)) + 0.5
+    } else {
+        // Use a linear equation
+        // f(0) = 0.5
+        // f(15) = at15
+        // Gradually decrease the y-value at x=15 until it becomes 0.5 (even odds)
+        at15 = 2.46 - 0.0196 * insane
+        factor = (at15 - 0.5)/15.0 + 0.5
+    }
+
+    // console.log("x = " + x + " factor = " + factor + " at15 = " + at15)
+
+    if (rand > factor) {
+        return switched ? 1 : 2
+    }
+    return switched ? 2 : 1
+}
+
+function getSeeds(matchId) {
+    var seed1String = document.getElementById(matchId).getElementsByClassName("slot slot1")[0].getElementsByClassName("seed")[0].textContent
+    var seed2String = document.getElementById(matchId).getElementsByClassName("slot slot2")[0].getElementsByClassName("seed")[0].textContent
+    return [parseInt(seed1String, 10), parseInt(seed2String, 10)]
+}
+
+function precisionRound(number, precision) {
+  var factor = Math.pow(10, precision);
+  return Math.round(number * factor) / factor;
+}
+
+</script>
+</body>
+</html>
