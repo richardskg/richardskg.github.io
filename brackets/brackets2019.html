@@ -54,7 +54,7 @@
 
       <div class="region region1">
         <h4 class="region1 first_region">
-          SOUTH
+          EAST
         </h4>
         <div id="match17" class="match m1"></div>
         <div id="match18" class="match m2"></div>
@@ -80,7 +80,7 @@
       </div>
       <div class="region region3">
         <h4 class="region3 first_region">
-          EAST
+          SOUTH
         </h4>
         <div id="match1" class="match m1"></div>
         <div id="match2" class="match m2"></div>
@@ -236,8 +236,8 @@
             </h3>
             <div id="match-14" class="match m1"></div>
             <div id="match-6" class="match m2"></div>
-            <div id="match-54" class="match m3"></div>
-            <div id="match-62" class="match m4"></div>
+            <div id="match-30" class="match m3"></div>
+            <div id="match-22" class="match m4"></div>
           </div>
       </div>
   </div>
@@ -250,19 +250,19 @@
 var firstFourTeams = [
     [16, "F. Dickinson", 16, "Prairie View", 24], // go to West  1,
     [11, "Arizona St", 11, "St. Johns", 28],  // go to Midwest 20
-    [11, "Belmont", 11, "Temple", 4], // go to EAST, 4
-    [16, "N.C. Central", 16, "N. Dak. St.", 0], // go to EAST, 1
+    [11, "Belmont", 11, "Temple", 16], // go to EAST, 4
+    [16, "N.C. Central", 16, "N. Dak. St.", 20], // go to EAST, 1
 ]
 var teams = [
-  // East
-  [1, "Duke", 16, "ff1"],
-  [8, "VCU", 9, "UCF"],
-  [5, "Miss State", 12, "Liberty"],
-  [4, "Va. Tech", 13, "Saint Louis"],
-  [6, "Maryland", 11, "ff2"],
-  [3, "LSU", 14, "Yale"],
-  [7, "Louisville", 10, "Minnesota"],
-  [2, "Michigan St.", 15, "Bradley"],
+  // South
+  [1, "Virginia", 16, "G-Webb"],
+  [8, "Ole Miss", 9, "Oklahoma"],
+  [5, "Wisconsin", 12, "Oregon"],
+  [4, "Kansas St.", 13, "UC Irvine"],
+  [6, "Villanova", 11, "St. Mary's"],
+  [3, "Purdue", 14, "Old Dominion"],
+  [7, "Cincinatti", 10, "Iowa"],
+  [2, "Tennessee", 15, "Colgate"],
   // Midwest
   [1, "N. Carolina", 16, "Iona"],
   [8, "Utah St.", 9, "Washington"],
@@ -272,15 +272,16 @@ var teams = [
   [3, "Houston", 14, "Georgia St."],
   [7, "Wofford", 10, "Seaton Hall"],
   [2, "Kentucky", 15, "Abiline Christian"],
-    // South
-  [1, "Virginia", 16, "G-Webb"],
-  [8, "Ole Miss", 9, "Oklahoma"],
-  [5, "Wisconsin", 12, "Oregon"],
-  [4, "Kansas St.", 13, "UC Irvine"],
-  [6, "Villanova", 11, "St. Mary's"],
-  [3, "Purdue", 14, "Old Dominion"],
-  [7, "Cincinatti", 10, "Iowa"],
-  [2, "Tennessee", 15, "Colgate"],
+
+  // East
+  [1, "Duke", 16, "ff1"],
+  [8, "VCU", 9, "UCF"],
+  [5, "Miss State", 12, "Liberty"],
+  [4, "Va. Tech", 13, "Saint Louis"],
+  [6, "Maryland", 11, "ff2"],
+  [3, "LSU", 14, "Yale"],
+  [7, "Louisville", 10, "Minnesota"],
+  [2, "Michigan St.", 15, "Bradley"],
   // West
   [1, "Gonzaga", 16, "ff"],
   [8, "Syracuse", 9, "Baylor"],
