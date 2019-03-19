@@ -58,7 +58,7 @@ header h1 {
 
 #sidebar-a a {
 	color: #5E667A;
-	text-decoration: none;	
+	text-decoration: none;
 }
 
 #sidebar-a a:hover {
@@ -212,7 +212,7 @@ label {
   padding: 0px 9px 0 9px;
   position: relative;
   overflow: hidden;
-  margin: auto 10px;    
+  margin: auto 10px;
 }
 
 .lavaLampWithImage li a:hover, .lavaLampWithImage li a:active, .lavaLampWithImage li a:visited {
@@ -220,8 +220,18 @@ label {
 }
 
 nav {
-	position: absolute; 
+	position: absolute;
 	bottom: 0;
 	float: right;
 }
 
+.ButtonOnBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.toBottom {
+    position: absolute;
+	bottom: 30px;
+}
