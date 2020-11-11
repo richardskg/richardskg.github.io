@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>NephiNumerics</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src = "js/lib/underscore-min.js"></script>
+		<script src = "js/lib/backbone-min.js"></script>
+  <script src = "js/index.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo"><h1>Nephi<a href="#">Numerics</a></h1></div>
+      <nav>
+        <ul class="lavaLampWithImage" id="lava_menu">
+          <li class='current'><a href="#home">home</a></li>
+          <li><a href="#about">about us</a></li>
+          <li><a href="#portfolio">our work</a></li>
+          <li><a href="#blog">blog</a></li>
+          <li><a href="#contact">contact</a></li>
+          <li><a href="brackets/index.html">Brackets</a></li>
+          <li><a href="simulations.html">physics</a></li>
+        </ul>
+      </nav>
+    </header>
+	  <script type= "text/template" id="content_text_template">
+		<%= text_placeholder %>
+	  </script>
+	<div id="site_content">
+      <div id="sidebar_container">
+        <div class="gallery">
+          <ul class="images">
+            <li class="show"><img width="450" height="450" src="images/1.jpg" alt="photo_one" /></li>
+            <li><img width="450" height="450" src="images/2.jpg" alt="photo_two" /></li>
+            <li><img width="450" height="450" src="images/3.jpg" alt="photo_three" /></li>
+            <li><img width="450" height="450" src="images/4.jpg" alt="photo_four" /></li>
+            <li><img width="450" height="450" src="images/5.jpg" alt="photo_five" /></li>
+          </ul>
+        </div>
+      </div>
+      <div id="content">
+		  <div id="content_text"></div>
+       </div>
+    </div>
+    <footer>
+      <p>
+	  <div class='links'>
+		  <a href="#home">home</a> |
+		  <a href="#about">about us</a> |
+		  <a href="#portfolio">our work</a> |
+		  <a href="#blog">blog</a> |
+		  <a href="#contact">contact</a> |
+          <a href="brackets/index.html">Brackets</a> |
+		  <a href="simulations.html">physics</a>
+	  </div>
+	  </p>
+      <p>&copy; 2020 NephiNumerics. All Rights Reserved. | <a href="http://www.css3templates.co.uk">design from css3templates.co.uk</a></p>
+    </footer>
+	<script>
+		window.myrouter = new MainRouter();
+		Backbone.history.start();
+	</script>
+  </div>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="js/jquery.lavalamp.min.js"></script>
+  <script type="text/javascript" src="js/image_fade.js"></script>
+  <script type="text/javascript">
+	$(function () {
+		// set up lavalamp
+		$("#lava_menu").lavaLamp({
+			fx: "backout",
+			speed: 700,
+		});
+
+		// initialize information box
+		$('.current').trigger('click');
+
+		// make links outside of the lavalamp work
+		$('.links a').click(function () {
+			var block = $(this).attr('href');
+			$('.current').removeClass('current');
+			var myParent = $('.lavaLampWithImage').find('a[href=' + block + ']').parent();
+			myParent.trigger('click');
+			myParent.addClass('current');
+			var debugString = myParent.valueOf();
+			console.log (debugString);
+			var lavaMenu = $('.lavaLampWithImage');
+			//console.log(lavaMenu);
+		});
+
+	});
+  </script>
+</body>
+</html>
