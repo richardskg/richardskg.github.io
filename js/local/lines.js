@@ -142,8 +142,9 @@ CheckboxIndividualView = Backbone.View.extend({
 			font_color : this.model.get('strokeColor'),
 		};
 		// Compile the template using underscore
-		var template = _.template($("#checkbox_template").html(), variables);
-		this.$el.html(template);
+		var template = _.template($("#checkbox_template").html());
+		var result = template(variables);
+		this.$el.html(result);
 		return this;
 	},
 	events : {
@@ -361,8 +362,9 @@ SimControllerView = Backbone.View.extend({
 				start_stop_string : startStopString
 			};
 			// Compile the template using underscore
-			var template = _.template($("#start_stop_template").html(), variables);
-			this.$("#start_stop_position").html(template);
+			var template = _.template($("#start_stop_template").html());
+			var result = template(variables);
+			this.$("#start_stop_position").html(result);
 			return this;
 		},
 
@@ -517,8 +519,9 @@ SimParametersIndividualView = Backbone.View.extend({
 			current_slider_value : this.value,
 		};
 		// Compile the template using underscore
-		var template = _.template($("#sim_parameters_template").html(), variables);
-		this.$el.html(template);
+		var template = _.template($("#sim_parameters_template").html())
+		var result = template(variables);
+		this.$el.html(result);
 		// Now change the id so the rest of our code can find it.
 		// The template will continually change the id, so we need to reset
 		// after each render.
