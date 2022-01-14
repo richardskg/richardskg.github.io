@@ -95,8 +95,10 @@ var TextView = Backbone.View.extend({
 			variables = {text_placeholder : ''};
 		}
 		// Compile the template using underscore
-		var template = _.template($("#content_text_template").html(), variables);
-		this.$el.html(template);
+		var template = _.template($("#content_text_template").html());
+		var result = template(variables);
+		this.$el.html(result);
+
 		return this;
 	},
 });
