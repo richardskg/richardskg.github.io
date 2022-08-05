@@ -107,12 +107,12 @@ table.gridtable td.title {
 #firstFour .round .winner,
 #firstFour .round .winner span.seed,
 #firstFour .round .winner span.score {
-  color: #1c8fec;
+  color: #2895ee;
 }
 #firstFour .loser,
 #firstFour .loser {
   font-weight: normal;
-  color: #353535;
+  color: #414040;
   text-decoration: line-through;
 }
 #bracket .centered {
@@ -135,7 +135,7 @@ table.gridtable td.title {
 #bracket .round .winner,
 #bracket .round .winner span.seed,
 #bracket .round .winner span.score {
-  color: #1c8fec;
+  color: #2895ee;
 }
 #bracket #round2 {
   left: 115px;
@@ -334,7 +334,7 @@ table.gridtable td.title {
 #bracket #round6 .winner,
 #bracket #round6 .winner span.seed,
 #bracket #round6 .winner span.score {
-  color: #14911a;
+  color: #288b14;
 }
 #bracket h3,
 #bracket h4 {
@@ -398,7 +398,7 @@ table.gridtable td.title {
 #bracket .loser,
 #bracket .loser {
   font-weight: normal;
-  color: #353535;
+  color: #414040;
   text-decoration: line-through;
 }
 #bracket .loser a {
