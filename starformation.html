@@ -2,9 +2,10 @@
 <html>
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTW395TP1L"></script>
-    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TTW395TP1L"></script>
+
+  
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -437,21 +438,22 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     </style>
   
 </head><body>
-  <header>
-    <h1>Physics!</h1>
-    <nav>
-      <ul class="lavaLampWithImage" id="lava_menu">
-        <li><a href="index.html">home</a></li>
-        <li><a href="simulations.html">physics home</a></li>
-        <li><a href="./BField.html">particle in constant field</a></li>
-        <li><a href="./ECrossB.html">particle in crossed fields</a></li>
-        <li class="current"><a href="./Lines.html">1D MHD</a></li>
-        <li><a href="./MHD-equations.html">Equations</a></li>
-        <li><a href="./starformation.html">Star Formation</a></li>
-      </ul>
-    </nav>
-    <p></p>
-  </header>
+		<header>
+			<h1>Physics!</h1>
+			<nav>
+				<ul class="lavaLampWithImage" id="lava_menu">
+					<li><a href="index.html">home</a></li>
+					<li><a href="simulations.html">physics home</a></li>
+					<li><a href="./BField.html">particle in constant field</a></li>
+					<li><a href="./ECrossB.html">particle in crossed fields</a></li>
+					<li class="current"><a href="./Lines.html">1D MHD</a></li>
+					<li><a href="./MHD-equations.html">Equations</a></li>
+          <li><a href="./starformation.html">Star Formation</a></li>
+				</ul>
+			</nav>
+			<p></p>
+		</header>
+
   <div class="container-fluid main-container">
     <div class="row">
       
@@ -497,7 +499,7 @@ If you are running the notebook and there are missing images or video, you can g
 <li>Intro</li>
 <li>SPH</li>
 <li>Other Meshless Codes (GIZMO)</li>
-<li>More Theory</li>
+<li>More Papers/Reading</li>
 <li>Some example runs</li>
 <li>Formation theory</li>
 <li>References</li>
@@ -1258,16 +1260,27 @@ U_* = \begin{bmatrix} \rho_* \\ u_* \end{bmatrix} =
 <p>Thus, given the values at the particle positions, we can find the values (and hence fluxes) at the surface separating the volumes.<br>
 Unfortunately, we don't have a simple analytical expression for the general 3-d MHD problem. We can use numerical methods to derive them, but that is very slow, so approximate methods are usually used.</p>
 
-<h2 id="4.-More-Theory">4. More Theory<a class="anchor-link" href="#4.-More-Theory">&#182;</a></h2><p>General readings</p>
+<h2 id="4.-More-Papers/Reading">4. More Papers/Reading<a class="anchor-link" href="#4.-More-Papers/Reading">&#182;</a></h2><p>General readings</p>
 
-<h3 id="a)-Rosswog">a) Rosswog<a class="anchor-link" href="#a)-Rosswog">&#182;</a></h3><p>Some notes so I remember where to find things. <br>
- 2.1 Descriptions of numerical quality factors (eqs, 17, 21, 25) <br>
- 2.2 Vanilla SPH. Descriptions of basics. Surface tension term (details later?)<br>
- 2.3 Derivation of energy conservation<br>
- $ \hspace{1.5em}$ Usefuleness of spherically symmetric kernels. <br>
- 2.4 Varying smoothing length<br></p>
+<h3 id="a)-Rosswog">a) Rosswog<a class="anchor-link" href="#a)-Rosswog">&#182;</a></h3><p>Some notes so I remember where to find things.<br>
+2.1 Descriptions of numerical quality factors (eqs, 17, 21, 25)<br>
+2.2 Vanilla SPH. Descriptions of basics. Surface tension term (details later? See sec 2.6)<br>
+2.3 Derivation of energy conservation<br>
+    &emsp; Usefulness of spherically symmetric kernels.<br>
+2.4 Varying smoothing length<br>
+2.6 Alternative formulations, remove the surface tension<br>
+    &emsp; 2.6.1 "ad-hoc" - GDF<br>
+    &emsp; 2.6.2 Generalized volume elements. Density causes blip in pressure since density is smoothed. Density only enters through volume so define volume without density.<br>
+2.7 Other gradients<br>
+    &emsp; Very useful for explorations. Will have to try some of them<br>
+    &emsp; 2.7.4 linear reproducing kernel. Reproduce constant and linear functions with very little angular momentum loss.<br>
+    &emsp; 2.7.5 Local regression estimate. Find gradients at points other than particle positions. Used in GR simulations 3.3. <br>
+    &emsp; 2.7.6 Errors in gradients  $\nabla F^{(0)}$ and $\nabla F^{(1)}$ (defined in 2.7.1 after eq (88) don't look so good compared with higher orders.<br>
+2.8 Shocks <br>
+    &emsp; 2.8.1 Artificial dissipation. Detailed look at dissipation, limiters and time dependent params.</p>
+<p>It looks like SPH can perform very well, still need to look in detail...</p>
 
-<h3 id="b)-PHANTOM">b) PHANTOM<a class="anchor-link" href="#b)-PHANTOM">&#182;</a></h3><p>Just discovered PHANTOM, an opensource production level SPH code. More to come...</p>
+<h3 id="b)-PHANTOM">b) PHANTOM<a class="anchor-link" href="#b)-PHANTOM">&#182;</a></h3><p>Just discovered PHANTOM (Price 2018), an open source production level SPH code. More to come...</p>
 
 <h2 id="5.-Some-example-runs">5. Some example runs<a class="anchor-link" href="#5.-Some-example-runs">&#182;</a></h2><p>Some examples of running GIZMO (or other) codes.</p>
 
@@ -1303,36 +1316,38 @@ outer regions of the sphere"<br></p>
 
 <h2 id="6.-Formation-theory">6. Formation theory<a class="anchor-link" href="#6.-Formation-theory">&#182;</a></h2><p>Look at "An Introduction to Star Formation"  Ward-Thompson and also "Star Formation" Krumholz. Notes and problem solutions to go here...</p>
 
-<h2 id="7.-References">7. References<a class="anchor-link" href="#7.-References">&#182;</a></h2><p>[1] Matthew Russell. Bate and University of Cambridge. Institute of Astron-
-omy. The role of accretion in binary star formation / by Matthew Russell
-Bate. eng. Cambridge, 1995.<br>
-[2] Evghenii Gaburov and Keigo Nitadori. “Astrophysical weighted particle
-magnetohydrodynamics”. en. In: Mon. Not. R. Astron. Soc. 414.1 (June
-2011), pp. 129–154.<br>
-[3] R A Gingold and J J Monaghan. “Kernel estimates as a basis for general
-particle methods in hydrodynamics”. en. In: J. Comput. Phys. 46.3 (June
-1982), pp. 429–453. <br>
-[4] R A Gingold and J J Monaghan. “Smoothed particle hydrodynamics:
-theory and application to non-spherical stars”. In: Mon. Not. R. Astron.
-Soc. 181.3 (Dec. 1977), pp. 375–389. <br>
-[5] Philip F Hopkins. “A new class of accurate, mesh-free hydrodynamic sim-
-ulation methods”. en. In: Mon. Not. R. Astron. Soc. 450.1 (June 2015),
-pp. 53–110. <br>
-[6] Philip F Hopkins and Matthias J Raives. “Accurate, meshless methods for
-magnetohydrodynamics”. en. In: Mon. Not. R. Astron. Soc. 455.1 (Jan.
-2016), pp. 51–88. <br>
-[7] L B Lucy. “A numerical approach to the testing of the fission hypothesis”.
-In: Astron. J. 82 (Dec. 1977), p. 1013. <br>
-[8] Daniel J Price. “Smoothed Particle Hydrodynamics and Magnetohydro-
-dynamics”. In: (Dec. 2010). arXiv: 1012.1885 [astro-ph.IM]. <br>
-[9] Daniel J Price. “Smoothed particle hydrodynamics and magnetohydrody-
-namics”. en. In: J. Comput. Phys. 231.3 (Feb. 2012), pp. 759–794. <br>
-[10] Stephan Rosswog. “SPH methods in the modelling of compact objects”.
-en. In: Living Rev. Comput. Astrophys. 1.1 (Dec. 2015). <br>
-[11] Stephan Rosswog. “SPH methods in the modelling of compact objects”.
-In: (July 2026). arXiv: 2607.14828 [astro-ph.HE]. <br>
-[12] Volker Springel. “Smoothed particle hydrodynamics in astrophysics”. en.
-In: Annu. Rev. Astron. Astrophys. 48.1 (Aug. 2010), pp. 391–430 <br></p>
+<h2 id="7.-References">7. References<a class="anchor-link" href="#7.-References">&#182;</a></h2><p>[1] M. R. Bate. The role of accretion in binary star formation / by matthew
+russell bate., 1995.<br>
+[2] E. Gaburov and K. Nitadori. Astrophysical weighted particle magnetohy-
+drodynamics. Mon. Not. R. Astron. Soc., 414(1):129–154, June 2011.<br>
+[3] R. A. Gingold and J. J. Monaghan. Smoothed particle hydrodynamics:
+theory and application to non-spherical stars. Mon. Not. R. Astron. Soc.,
+181(3):375–389, Dec. 1977.<br>
+[4] R. A. Gingold and J. J. Monaghan. Kernel estimates as a basis for general
+particle methods in hydrodynamics. J. Comput. Phys., 46(3):429–453, June
+1982.<br>
+[5] P. F. Hopkins. A new class of accurate, mesh-free hydrodynamic simulation
+methods. Mon. Not. R. Astron. Soc., 450(1):53–110, June 2015.<br>
+[6] P. F. Hopkins and M. J. Raives. Accurate, meshless methods for magneto-
+hydrodynamics. Mon. Not. R. Astron. Soc., 455(1):51–88, Jan. 2016.<br>
+[7] L. B. Lucy. A numerical approach to the testing of the fission hypothesis.
+Astron. J., 82:1013, Dec. 1977.<br>
+[8] D. J. Price. Smoothed particle hydrodynamics and magnetohydrodynamics.
+Dec. 2010.<br>
+[9] D. J. Price. Smoothed particle hydrodynamics and magnetohydrodynamics.
+J. Comput. Phys., 231(3):759–794, Feb. 2012.<br>
+[10] D. J. Price, J. Wurster, T. S. Tricco, C. Nixon, S. Toupin, A. Pettitt,
+C. Chan, D. Mentiplay, G. Laibe, S. Glover, C. Dobbs, R. Nealon, D. Lip-
+tai, H. Worpel, C. Bonnerot, G. Dipierro, G. Ballabio, E. Ragusa, C. Fed-
+errath, R. Iaconi, T. Reichardt, D. Forgan, M. Hutchison, T. Constantino,
+B. Ayliffe, K. Hirsh, and G. Lodato. Phantom: A smoothed particle hydro-
+dynamics and magnetohydrodynamics code for astrophysics. Publ. Astron.
+Soc. Aust., 35(e031), 2018.<br>
+[11] S. Rosswog. Sph methods in the modelling of compact objects. Living Rev.
+Comput. Astrophys., 1(1), Dec. 2015.<br>
+[12] S. Rosswog. Sph methods in the modelling of compact objects. July 2026.<br>
+[13] V. Springel. Smoothed particle hydrodynamics in astrophysics. Annu. Rev.
+Astron. Astrophys., 48(1):391–430, Aug. 2010.<br></p>
 
 
 
